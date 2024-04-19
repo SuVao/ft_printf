@@ -3,14 +3,14 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: marvin <marvin@student.42.fr>              +#+  +:+       +#+         #
+#    By: pesilva- <pesilva-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/18 13:32:36 by pesilva-          #+#    #+#              #
-#    Updated: 2024/04/18 21:47:13 by marvin           ###   ########.fr        #
+#    Updated: 2024/04/19 13:02:31 by pesilva-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = libftprintf.a
+NAME = ft_printf.a
 
 AUTHOR = pesilva-
 
@@ -20,15 +20,18 @@ FLAGS = -Wall -Werror -Wextra
 
 RM = rm -rf
 
-SRC = ft_formatof.c ft_printf.c ft_putchar_pf.c ft_putstr_pf.c
+AR = ar rcs
+
+SRC = ft_formatof.c ft_printf.c ft_putchar_pf.c ft_putstr_pf.c \
+	ft_lowhex_pf.c ft_uphex_pf.c
 
 OBJ = $(SRC:.c=.o)
 
 all : $(NAME)
 
 $(NAME) : $(OBJ)
-	ar rc $(NAME) $(OBJ)
-	ranlib $(NAME)
+	$(AR) $(NAME) $(OBJ)
+
 
 %.o : %.c
 	$(CC) $(FLAGS) -c $< -o $@
