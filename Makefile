@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: pesilva- <pesilva-@student.42lisboa.com    +#+  +:+       +#+         #
+#    By: marvin <marvin@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/18 13:32:36 by pesilva-          #+#    #+#              #
-#    Updated: 2024/04/18 14:11:41 by pesilva-         ###   ########.fr        #
+#    Updated: 2024/04/18 21:47:13 by marvin           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,29 +20,21 @@ FLAGS = -Wall -Werror -Wextra
 
 RM = rm -rf
 
-AR = ar crs
+SRC = ft_formatof.c ft_printf.c ft_putchar_pf.c ft_putstr_pf.c
 
-SRC = 
-
-BONUS = 
-
-OBJ = $(SRC:.C=.O)
-
-BONUS_OBJ = $(BONUS:.C=.O)
+OBJ = $(SRC:.c=.o)
 
 all : $(NAME)
 
 $(NAME) : $(OBJ)
-	$(AR) $(NAME) $(OBJ)
-
-bonus : $(BONUS_OBJ)
-	$(AR) $(NAME) $(BONUS_OBJ)
+	ar rc $(NAME) $(OBJ)
+	ranlib $(NAME)
 
 %.o : %.c
 	$(CC) $(FLAGS) -c $< -o $@
 
 clean :
-	$(RM) $(OBJ) $(BONUS_OBJ)
+	$(RM) $(OBJ)
 
 fclean : clean
 	$(RM) $(NAME)
