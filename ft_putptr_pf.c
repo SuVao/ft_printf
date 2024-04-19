@@ -1,36 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_pf.c                                     :+:      :+:    :+:   */
+/*   ft_putptr_pf.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pesilva- <pesilva-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/19 19:43:54 by pesilva-          #+#    #+#             */
-/*   Updated: 2024/04/19 19:43:54 by pesilva-         ###   ########.fr       */
+/*   Created: 2024/04/19 19:43:32 by pesilva-          #+#    #+#             */
+/*   Updated: 2024/04/19 19:43:32 by pesilva-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_putnbr_pf(int n)
+#include "ft_printf.h"
+
+int	ft_putptr_pf(unsigned long long n)
 {
-	long	nb;
-	int		count;
+	int	count;
 
 	count = 0;
-	nb = n;
-	if (nb < 0)
+	count += ft_putstr_pf("0x");
+	if (n >= 16)
 	{
-		count += ft_putchar_pf('-');
-		nb = -nb;
-	}
-	if (n < 0)
-	{
-		count += ft_putchar_pf('-');
-		n = -n;
-	}
-	if (n >= 10)
-	{
-		count += ft_putnbr_pf(n / 10);
-		count += ft_putchar_pf(n % 10 + '0');
+		count += ft_putptr_pf(n / 16);
+		count += ft_putchar_pf(n % 16 + '0');
 	}
 	else
 		count += ft_putchar_pf(n + '0');

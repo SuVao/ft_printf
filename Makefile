@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: pesilva- <pesilva-@student.42.fr>          +#+  +:+       +#+         #
+#    By: pesilva- <pesilva-@student.42lisboa.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/04/18 13:32:36 by pesilva-          #+#    #+#              #
-#    Updated: 2024/04/19 13:02:31 by pesilva-         ###   ########.fr        #
+#    Created: 2024/04/19 19:44:12 by pesilva-          #+#    #+#              #
+#    Updated: 2024/04/19 19:44:14 by pesilva-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,7 +31,6 @@ all : $(NAME)
 
 $(NAME) : $(OBJ)
 	$(AR) $(NAME) $(OBJ)
-
 
 %.o : %.c
 	$(CC) $(FLAGS) -c $< -o $@
