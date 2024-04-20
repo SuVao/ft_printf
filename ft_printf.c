@@ -6,7 +6,7 @@
 /*   By: pesilva- <pesilva-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 19:46:15 by pesilva-          #+#    #+#             */
-/*   Updated: 2024/04/19 19:46:17 by pesilva-         ###   ########.fr       */
+/*   Updated: 2024/04/19 21:47:08 by pesilva-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,12 +35,14 @@ int	ft_printf(const char *s, ...)
 int main()
 {
 	int	i = 0;
+	void	*ptr;
 
-	i = ft_printf("ola caralho %c \n", '5');
+	ptr = &i;
+	i = ft_printf("ola caralho %p \n", ptr);
 	printf("contagem de caracteres %d \n", i);
 
 	i = 0;
-	i = printf("ola caralho %c \n", '5');
+	i = printf("ola caralho %p \n", ptr);
 	printf("contagem de caracteres %d \n", i);
 	return (0);
 }

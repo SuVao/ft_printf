@@ -6,7 +6,7 @@
 /*   By: pesilva- <pesilva-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 19:43:45 by pesilva-          #+#    #+#             */
-/*   Updated: 2024/04/19 19:43:47 by pesilva-         ###   ########.fr       */
+/*   Updated: 2024/04/19 21:45:40 by pesilva-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,9 @@ int		ft_formatof(char type, va_list ptr);
 int		ft_lowhex_pf(int i);
 int		ft_uphex_pf(int i);
 int		ft_putnbr_pf(int n);
+int		ft_putptr_pf(unsigned long long n);
+int		ft_nbrbase_pf(unsigned int n);
+int		ft_unsigint_pf(unsigned int n);
+int		ft_printf(const char *s, ...);
 
 #endif
