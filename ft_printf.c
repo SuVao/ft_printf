@@ -6,7 +6,7 @@
 /*   By: pesilva- <pesilva-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/20 18:55:53 by pesilva-          #+#    #+#             */
-/*   Updated: 2024/04/20 18:55:55 by pesilva-         ###   ########.fr       */
+/*   Updated: 2024/04/20 19:59:15 by pesilva-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,17 +36,10 @@ int ft_printf(const char *s, ...)
 
 int main()
 {
+	int i = 42;
 	int j = 0;
-	int i = 0;
-	void *ptr;
 
-
-	ptr = &j;
-	i = ft_printf("%p \n", ptr); 
-	ft_printf("\n %d \n", i);
-	
-	i = 0;
-	i = printf("%p \n", ptr);
-	printf("\n %d \n", i);
-	return (0);
+	j = ft_printf("Hello, %d\n", i);
+	printf("Return value: %d\n", j);
+	j = 0;
 }

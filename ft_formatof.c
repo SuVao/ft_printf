@@ -6,7 +6,7 @@
 /*   By: pesilva- <pesilva-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/20 18:53:35 by pesilva-          #+#    #+#             */
-/*   Updated: 2024/04/20 18:54:15 by pesilva-         ###   ########.fr       */
+/*   Updated: 2024/04/20 19:03:27 by pesilva-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,8 @@ int ft_formatof(char type, va_list ptr)
 		i += ft_putnbr_pf(va_arg(ptr, int));
 	else if (type == 'p')
 		i += ft_putptr_pf(va_arg(ptr, void *));
-	/*	else if (type == 'u')
-			i += ft_unsigint_pf(va_arg(ptr, unsigned int)); */
+	else if (type == 'u')
+		i += ft_unsigint_pf(va_arg(ptr, unsigned int));
 	else if (type == 'x')
 		i += ft_lowhex_pf(va_arg(ptr, int));
 	else if (type == 'X')

@@ -6,7 +6,7 @@
 /*   By: pesilva- <pesilva-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/20 18:56:07 by pesilva-          #+#    #+#             */
-/*   Updated: 2024/04/20 18:57:24 by pesilva-         ###   ########.fr       */
+/*   Updated: 2024/04/20 19:03:49 by pesilva-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,6 @@ int		ft_lowhex_pf(int i);
 int		ft_uphex_pf(int i);
 int		ft_putnbr_pf(int i);
 int		ft_putptr_pf(void *ptr);
+int		ft_unsigint_pf(unsigned int i);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: pesilva- <pesilva-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 19:44:27 by pesilva-          #+#    #+#             */
-/*   Updated: 2024/04/19 19:44:30 by pesilva-         ###   ########.fr       */
+/*   Updated: 2024/04/20 19:04:37 by pesilva-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,7 @@
 
 int	ft_lowhex_pf(int i)
 {
-	char	*str;
-	str = "0123456789abcdef";
 	if (i >= 16)
 		ft_lowhex_pf(i / 16);
-	return (write(1, &str[i % 16], 1));
+	return (write(1, LOW_HEX[i % 16], 1));
 }
