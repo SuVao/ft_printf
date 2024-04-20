@@ -28,12 +28,7 @@ RM = rm -rf
 AR = ar rcs
 
 SRC = ft_formatof.c ft_printf.c ft_putchar_pf.c ft_putstr_pf.c \
-<<<<<<< HEAD
-	ft_lowhex_pf.c ft_uphex_pf.c ft_nbrbase_pf.c ft_putptr_pf.c \
-	ft_putnbr_pf.c 
-=======
 	ft_lowhex_pf.c ft_uphex_pf.c ft_putnbr_pf.c ft_putptr_pf.c
->>>>>>> ec3c761 (putnbr)
 
 OBJ = $(SRC:.c=.o)
 
