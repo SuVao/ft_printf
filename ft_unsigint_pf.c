@@ -12,21 +12,19 @@
 
 #include "ft_printf.h"
 
-int	ft_unsigint_pf(unsigned int i)
+int	ft_unsigint_pf(unsigned int nb, int i)
 {
 	long	n;
-	int		count;
 
-	count = 0;
-	n = i;
+	n = nb;
 	if (n == 4294967295)
-		return (count += ft_putstr_pf("4294967295"));
+		return (ft_putstr_pf("4294967295", i));
 	while (n > 9)
 	{
 		n /= 10;
-		count += ft_putchar_pf(DEC_BASE[n % 10]);
+		ft_putchar_pf(DEC_BASE[n % 10], i);
 	}
 	if (n < 10)
-		count += ft_putchar_pf(DEC_BASE[n]);
-	return (count);
+		ft_putchar_pf(DEC_BASE[n], i);
+	return (i);
 }

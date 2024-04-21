@@ -6,7 +6,7 @@
 /*   By: pesilva- <pesilva-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/20 18:55:53 by pesilva-          #+#    #+#             */
-/*   Updated: 2024/04/21 17:37:18 by pesilva-         ###   ########.fr       */
+/*   Updated: 2024/04/21 17:51:25 by pesilva-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,12 @@ int	ft_printf(const char *s, ...)
 	while (*s)
 	{
 		if (*s == '%')
-			i += ft_formatof(*(++s), ptr);
+			i += ft_formatof(*(++s), ptr, i);
 		else
-			i += write(1, s, 1);
+		{
+			write(1, s, 1);
+			i++;
+		}
 		s++;
 	}
 	va_end(ptr);

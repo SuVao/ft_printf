@@ -6,17 +6,14 @@
 /*   By: pesilva- <pesilva-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/20 18:53:35 by pesilva-          #+#    #+#             */
-/*   Updated: 2024/04/21 17:33:44 by pesilva-         ###   ########.fr       */
+/*   Updated: 2024/04/21 17:49:16 by pesilva-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_formatof(char type, va_list ptr)
+int	ft_formatof(char type, va_list ptr, int i)
 {
-	int	i;
-
-	i = 0;
 	if (type == 'c')
 		i += ft_putchar_pf(va_arg(ptr, int));
 	else if (type == 's')

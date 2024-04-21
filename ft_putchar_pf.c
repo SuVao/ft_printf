@@ -6,15 +6,17 @@
 /*   By: pesilva- <pesilva-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 19:46:25 by pesilva-          #+#    #+#             */
-/*   Updated: 2024/04/21 16:45:19 by pesilva-         ###   ########.fr       */
+/*   Updated: 2024/04/21 17:52:09 by pesilva-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_putchar_pf(char c)
+int	ft_putchar_pf(char c, int i)
 {
-	return (write(1, &c, 1));
+	write(1, &c, 1);
+	i++;
+	return (i);
 }
 
 /* int main()
