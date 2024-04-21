@@ -3,10 +3,14 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: pesilva- <pesilva-@student.42lisboa.com    +#+  +:+       +#+         #
+#    By: pesilva- <pesilva-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/20 19:08:57 by pesilva-          #+#    #+#              #
+<<<<<<< HEAD
 #    Updated: 2024/04/20 20:59:31 by pesilva-         ###   ########.fr        #
+=======
+#    Updated: 2024/04/21 16:36:38 by pesilva-         ###   ########.fr        #
+>>>>>>> b00770a (100% done)
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +20,7 @@ AUTHOR = pesilva-
 
 CC = cc
 
-FLAGS = -Wall -Werror -Wextra
+FLAGS = -Wall -Werror -Wextra 
 
 RM = rm -rf
 
