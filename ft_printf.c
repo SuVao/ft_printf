@@ -6,17 +6,17 @@
 /*   By: pesilva- <pesilva-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/20 18:55:53 by pesilva-          #+#    #+#             */
-/*   Updated: 2024/04/21 17:21:27 by pesilva-         ###   ########.fr       */
+/*   Updated: 2024/04/21 17:37:18 by pesilva-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 #include <stdio.h>
 
-int ft_printf(const char *s, ...)
+int	ft_printf(const char *s, ...)
 {
-	va_list ptr;
-	int i;
+	va_list	ptr;
+	int		i;
 
 	if (!s)
 		return (0);
