@@ -20,15 +20,20 @@ int	ft_unsigint_pf(unsigned int i)
 	count = 0;
 	n = i;
 	if (n < 0)
-		return (count += ft_putstr_pf("4294967295"));
-	if (n < 10)
-		ft_putchar_pf(DEC_BASE[n]);
+	{
+		ft_putstr_pf("4294967296");
+		count = count + 10;
+		return (count);
+	}
+	printf("count: %d \n", count);
 	if (n > 9)
 	{
 		count++;
 		ft_unsigint_pf(n / 10);
 		ft_putchar_pf(DEC_BASE[n % 10]);
 	}
+	if (n < 10)
+		ft_putchar_pf(DEC_BASE[n]);
 	count++;
 	return (count);
 }

@@ -6,7 +6,7 @@
 #    By: pesilva- <pesilva-@student.42lisboa.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/20 19:08:57 by pesilva-          #+#    #+#              #
-#    Updated: 2024/04/20 19:10:06 by pesilva-         ###   ########.fr        #
+#    Updated: 2024/04/20 20:59:31 by pesilva-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,8 @@ RM = rm -rf
 AR = ar rcs
 
 SRC = ft_formatof.c ft_printf.c ft_putchar_pf.c ft_putstr_pf.c \
-	ft_lowhex_pf.c ft_uphex_pf.c ft_putnbr_pf.c ft_unsigint_pf.c 
+	ft_lowhex_pf.c ft_uphex_pf.c ft_putnbr_pf.c ft_unsigint_pf.c \
+	ft_putptr_pf.c
 
 OBJ = $(SRC:.c=.o)
 
