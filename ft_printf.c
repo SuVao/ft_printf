@@ -5,12 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: pesilva- <pesilva-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/20 18:55:53 by pesilva-          #+#    #+#             */
-<<<<<<< HEAD
-/*   Updated: 2024/04/22 15:26:14 by pesilva-         ###   ########.fr       */
-=======
-/*   Updated: 2024/04/22 09:25:40 by pesilva-         ###   ########.fr       */
->>>>>>> 181d1f87512fbbd725428c711855cf99e7c567e9
+/*   Created: 2024/04/22 16:18:26 by pesilva-          #+#    #+#             */
+/*   Updated: 2024/04/22 16:24:42 by pesilva-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,10 +62,10 @@ int main()
 	j = ft_printf("Hello, %u\n", -1);
 	printf("Return value: %d\n", j);
 	j = 0;
-	j = ft_printf("Hello, %x\n", 12412141515144);
+	j = ft_printf("Hello, %x\n", 123123);
 	ft_printf("Return value: %d\n", j);
 	j = 0;
-	j = ft_printf("Hello, %X\n", 12412141515144);
+	j = ft_printf("Hello, %X\n", 123123);
 	ft_printf("Return value: %d\n", j);
 	printf("<<<<<<<<<<<>>>>>>>>>>\n");
 	j = 0;
@@ -91,13 +87,10 @@ int main()
 	j = printf("Hello, %u\n", -1);
 	printf("Return value: %d\n", j);
 	j = 0;
-	j = printf("Hello, %x\n", 12412141515144);
+	j = printf("Hello, %x\n", 123123);
 	printf("Return value: %d\n", j);
 	j = 0;
-	j = printf("Hello, %X\n", 12412141515144);
+	j = printf("Hello, %X\n", 123123);
 	printf("Return value: %d\n", j);
-<<<<<<< HEAD
+	return (0);
 }
-=======
-}
->>>>>>> 181d1f87512fbbd725428c711855cf99e7c567e9
