@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pesilva- <pesilva-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: pesilva- <pesilva-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/20 18:55:53 by pesilva-          #+#    #+#             */
-/*   Updated: 2024/04/21 17:51:25 by pesilva-         ###   ########.fr       */
+/*   Updated: 2024/04/22 09:25:40 by pesilva-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int	ft_printf(const char *s, ...)
 	while (*s)
 	{
 		if (*s == '%')
-			i += ft_formatof(*(++s), ptr, i);
+			i = ft_formatof(*(++s), ptr, i);
 		else
 		{
 			write(1, s, 1);
@@ -37,7 +37,7 @@ int	ft_printf(const char *s, ...)
 	return (i);
 }
 
-/* int main()
+int main()
 {
 	int i = 42;
 	int j = 49;
@@ -63,10 +63,10 @@ int	ft_printf(const char *s, ...)
 	j = ft_printf("Hello, %u\n", -1);
 	printf("Return value: %d\n", j);
 	j = 0;
-	j = ft_printf("Hello, %x\n", 124124);
+	j = ft_printf("Hello, %x\n", 12412141515144);
 	ft_printf("Return value: %d\n", j);
 	j = 0;
-	j = ft_printf("Hello, %X\n", 124124);
+	j = ft_printf("Hello, %X\n", 12412141515144);
 	ft_printf("Return value: %d\n", j);
 	printf("<<<<<<<<<<<>>>>>>>>>>\n");
 	j = 0;
@@ -88,11 +88,9 @@ int	ft_printf(const char *s, ...)
 	j = printf("Hello, %u\n", -1);
 	printf("Return value: %d\n", j);
 	j = 0;
-	j = printf("Hello, %x\n", 124124);
+	j = printf("Hello, %x\n", 12412141515144);
 	printf("Return value: %d\n", j);
 	j = 0;
-	j = printf("Hello, %X\n", 124124);
+	j = printf("Hello, %X\n", 12412141515144);
 	printf("Return value: %d\n", j);
-	ft_printf("%s %d\n", j, i);
-	printf("%s \n", j);
-} */
+}

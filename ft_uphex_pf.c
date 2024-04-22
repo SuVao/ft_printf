@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_uphex_pf.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pesilva- <pesilva-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: pesilva- <pesilva-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 19:46:51 by pesilva-          #+#    #+#             */
-/*   Updated: 2024/04/21 17:59:05 by pesilva-         ###   ########.fr       */
+/*   Updated: 2024/04/22 09:20:46 by pesilva-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_uphex_pf(int n, int i)
+int	ft_uphex_pf(unsigned long long n, int i)
 {
 	if (n >= 16)
 		ft_uphex_pf(i / 16, i);
