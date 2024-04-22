@@ -3,10 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pesilva- <pesilva-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: pesilva- <pesilva-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/20 18:56:07 by pesilva-          #+#    #+#             */
+<<<<<<< HEAD
 /*   Updated: 2024/04/22 15:10:45 by pesilva-         ###   ########.fr       */
+=======
+/*   Updated: 2024/04/22 09:23:07 by pesilva-         ###   ########.fr       */
+>>>>>>> 181d1f87512fbbd725428c711855cf99e7c567e9
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +33,10 @@ int		ft_lowhex_pf(unsigned long long n, int i);
 int		ft_uphex_pf(unsigned long long n, int i);
 int		ft_putnbr_pf(int n, int i);
 int		ft_putptr_pf(void *ptr, int i);
+<<<<<<< HEAD
 int		ft_unsigint_pf(unsigned int n, int i);
+=======
+int		ft_unsigint_pf(unsigned int nb, int i);
+>>>>>>> 181d1f87512fbbd725428c711855cf99e7c567e9
 
 #endif
