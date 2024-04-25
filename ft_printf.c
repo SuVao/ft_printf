@@ -6,7 +6,7 @@
 /*   By: pesilva- <pesilva-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 16:18:26 by pesilva-          #+#    #+#             */
-/*   Updated: 2024/04/22 16:24:42 by pesilva-         ###   ########.fr       */
+/*   Updated: 2024/04/25 14:16:29 by pesilva-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ int	ft_printf(const char *s, ...)
 	return (i);
 }
 
-int main()
+/* int main()
 {
 	int i = 42;
 	int j = 49;
@@ -67,6 +67,7 @@ int main()
 	j = 0;
 	j = ft_printf("Hello, %X\n", 123123);
 	ft_printf("Return value: %d\n", j);
+	ft_printf("Return value: %%%s\n", j);
 	printf("<<<<<<<<<<<>>>>>>>>>>\n");
 	j = 0;
 	j = printf("Hello, %d\n", i);
@@ -91,6 +92,7 @@ int main()
 	printf("Return value: %d\n", j);
 	j = 0;
 	j = printf("Hello, %X\n", 123123);
-	printf("Return value: %d\n", j);
+	printf("Return value: %s\n", j);
 	return (0);
 }
+ */
