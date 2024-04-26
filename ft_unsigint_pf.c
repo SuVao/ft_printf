@@ -12,7 +12,7 @@
 
 #include "ft_printf.h"
 
-int	nbr_len(unsigned int n)
+/*int	nbr_len(unsigned int n)
 {
 	int	i;
 
@@ -25,7 +25,7 @@ int	nbr_len(unsigned int n)
 		i++;
 	}
 	return (i);
-}
+}*/
 
 
 int	ft_unsigint_pf(unsigned int nb, int i)
@@ -34,11 +34,14 @@ int	ft_unsigint_pf(unsigned int nb, int i)
 
 	n = nb;
 	if (n > 9)
-	{
-		ft_unsigint_pf(n / 10, i);
-		ft_putchar_pf(DEC_BASE[n % 10], i);
-	}
-	if (n < 10)
-		ft_putchar_pf(DEC_BASE[n], i);
-	return (nbr_len(nb) + i);
+		i = ft_unsigint_pf(n / 10, i);
+	i = ft_putchar_pf(DEC_BASE[n % 10], i);
+	return (i);
 }
+
+// int main()
+// {
+// 	int i;
+// 	i = printf("%i\n", ft_unsigint_pf(324234, 0));
+// 	printf("Return value: %d\n", i);
+// }
