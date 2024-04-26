@@ -16,6 +16,7 @@
 # include <unistd.h>
 # include <stdarg.h>
 # include <stdio.h>
+# include <limits.h>
 
 # define LOW_HEX "0123456789abcdef"
 # define UP_HEX "0123456789ABCDEF"

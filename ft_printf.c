@@ -6,7 +6,7 @@
 /*   By: pesilva- <pesilva-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/20 18:55:53 by pesilva-          #+#    #+#             */
-/*   Updated: 2024/04/26 11:19:15 by pesilva-         ###   ########.fr       */
+/*   Updated: 2024/04/26 17:20:38 by pesilva-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,20 @@ int	ft_printf(const char *s, ...)
 	return (i);
 }
 
-int main()
+/* int main()
+{
+	unsigned long long j = 0;
+	
+	j = ft_printf("%X", LONG_MAX);
+	printf("\ncount: %llu \n", j);
+	j = 0;
+	j = printf("%lX", LONG_MAX);
+	printf("\ncount: %llu \n", j);
+
+	return (0);
+} */
+
+/* int main()
 {
 	int i = 42;
 	int j = 49;
@@ -45,10 +58,10 @@ int main()
 	void *ptr;
 
 	ptr = &i;
-	j = ft_printf("Hello, %d\n", i);
+	j = ft_printf("Hello, %d\n", INT_MIN);
 	ft_printf("Return value: %d\n", j);
 	j = 0;
-	j = ft_printf("Hello, %c\n", 'c');
+	j = ft_printf("Hello, %d\n", INT_MAX);
 	ft_printf("Return value: %d\n", j);
 	j = 0;
 	j = ft_printf("Hello, %s\n", "world");
@@ -70,10 +83,10 @@ int main()
 	ft_printf("Return value: %d\n", j);
 	printf("<<<<<<<<<<<>>>>>>>>>>\n");
 	j = 0;
-	j = printf("Hello, %d\n", i);
+	j = printf("Hello, %d\n", 100);
 	printf("Return value: %d\n", j);
 	j = 0;
-	j = printf("Hello, %c\n", 'c');
+	j = printf("Hello, %d\n", 101);
 	printf("Return value: %d\n", j);
 	j = 0;
 	j = printf("Hello, %s\n", "world");
@@ -94,4 +107,4 @@ int main()
 	j = printf("Hello, %X\n", 124121415);
 	printf("Return value: %d\n", j);
 	return (0);
-}
+} */
