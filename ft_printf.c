@@ -6,7 +6,7 @@
 /*   By: pesilva- <pesilva-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/20 18:55:53 by pesilva-          #+#    #+#             */
-/*   Updated: 2024/04/26 17:20:38 by pesilva-         ###   ########.fr       */
+/*   Updated: 2024/04/29 15:45:20 by pesilva-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,15 @@ int	ft_printf(const char *s, ...)
 	int		i;
 
 	if (!s)
-		return (0);
+		return (-1);
 	va_start(ptr, s);
 	i = 0;
 	while (*s)
 	{
 		if (*s == '%')
+		{
 			i = ft_formatof(*(++s), ptr, i);
+		}
 		else
 		{
 			write(1, s, 1);
@@ -39,16 +41,28 @@ int	ft_printf(const char *s, ...)
 
 /* int main()
 {
-	unsigned long long j = 0;
+	int j = 0;
 	
-	j = ft_printf("%X", LONG_MAX);
-	printf("\ncount: %llu \n", j);
+	j = ft_printf("%%%c%%%s%%%d%%%i%%%u%%%x%%%X%%%% %%%c%%%s%%%d%%%i%%%u%%%x%%%X%%%% %%%c%%%s%%%d%%%i%%%u%%%x%%%X%%%% %c%%", 'A', "42", 42, 42 ,42 , 42, 42, 'B', "-42", -42, -42 ,-42 ,-42, 42, 'C', "0", 0, 0 ,0 ,0, 42, 0);
+	printf("\ncount: %d \n", j);
 	j = 0;
-	j = printf("%lX", LONG_MAX);
-	printf("\ncount: %llu \n", j);
+	j = printf("%%%c%%%s%%%d%%%i%%%u%%%x%%%X%%%% %%%c%%%s%%%d%%%i%%%u%%%x%%%X%%%% %%%c%%%s%%%d%%%i%%%u%%%x%%%X%%%% %c%%", 'A', "42", 42, 42 ,42 , 42, 42, 'B', "-42", -42, -42 ,-42 ,-42, 42, 'C', "0", 0, 0 ,0 ,0, 42, 0);
+	printf("\ncount: %d \n", j);
 
 	return (0);
 } */
+
+int main()
+{
+	int i = 42;
+	int j = 0;
+
+	j = ft_printf("hex: %x%X%x%X%x%X%x%X \n", i, i, i, i, i, i, i, i);
+	ft_printf("\ncount: %d \n", j);
+	j = 0;
+	j = printf("hex: %x%X%x%X%x%X%x%X \n", i, i, i, i, i, i, i, i);
+	printf("\ncount: %d \n", j);
+}
 
 /* int main()
 {
