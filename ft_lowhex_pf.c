@@ -6,7 +6,7 @@
 /*   By: pesilva- <pesilva-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 19:44:27 by pesilva-          #+#    #+#             */
-/*   Updated: 2024/04/29 16:42:45 by pesilva-         ###   ########.fr       */
+/*   Updated: 2024/04/29 17:09:43 by pesilva-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,8 @@
 int	ft_lowhex_pf(unsigned long long n, int i)
 {
 	if (n >= 16)
-		i = ft_lowhex_pf(n / 16, i);
-	i = ft_putchar_pf(LOW_HEX[n % 16], i);
+		i = ft_lowhex_pf(n / 16, 1);
+	i = ft_putchar_pf(LOW_HEX[n % 16], 1);
 	return (i);
 }
 
