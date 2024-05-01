@@ -25,9 +25,9 @@ int	ft_formatof(char type, va_list ptr, int i)
 	else if (type == 'u')
 		i = ft_unsigint_pf(va_arg(ptr, unsigned int), i);
 	else if (type == 'x')
-		i = ft_lowhex_pf(va_arg(ptr, unsigned long long), i);
+		i = ft_lowhex_pf(va_arg(ptr, unsigned int), i);
 	else if (type == 'X')
-		i = ft_uphex_pf(va_arg(ptr, unsigned long long), i);
+		i = ft_uphex_pf(va_arg(ptr, unsigned int), i);
 	else if (type == '%')
 	{
 		i++;

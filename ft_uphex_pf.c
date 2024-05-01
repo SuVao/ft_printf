@@ -12,7 +12,7 @@
 
 #include "ft_printf.h"
 
-/* static int	nbr_len(unsigned long long n)
+/* static int	nbr_len(unsigned int n)
 {
 	int	i;
 
@@ -27,11 +27,10 @@
 	return (i);
 } */
 
-int	ft_uphex_pf(unsigned long long n, int i)
+int	ft_uphex_pf(unsigned int n, int i)
 {
 	if (n >= 16)
 		i = ft_uphex_pf(n / 16, i);
-	printf("put hex: %llu\n", n);
 	i = ft_putchar_pf(UP_HEX[n % 16], i);
 	return (i);
 }

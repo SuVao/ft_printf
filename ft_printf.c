@@ -6,7 +6,7 @@
 /*   By: pesilva- <pesilva-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/20 18:55:53 by pesilva-          #+#    #+#             */
-/*   Updated: 2024/04/29 17:07:12 by pesilva-         ###   ########.fr       */
+/*   Updated: 2024/05/01 12:19:44 by pesilva-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,8 @@ int	ft_printf(const char *s, ...)
 	{
 		if (*s == '%')
 		{
-			i = ft_formatof(*(++s), ptr, i);
+			s++;
+			i = ft_formatof(*(s), ptr, i);
 		}
 		else
 		{
@@ -39,11 +40,11 @@ int	ft_printf(const char *s, ...)
 	return (i);
 }
 
-int main()
+/* int main()
 {
 	int i = 42;
-	ft_printf("hex:|%x| |%X| |%x| |%X| |%x| |%X| |%x| \n", i, i, i, i, i, 42, i);
-}
+	ft_printf("hex:|%x| |%X| |%x|\n", i, i, i);
+} */
 
 /* int main()
 {
